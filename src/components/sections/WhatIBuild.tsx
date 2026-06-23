@@ -28,7 +28,7 @@ export default function WhatIBuild() {
         <FadeIn>
           <p className="font-mono text-xs text-gold/50 tracking-[0.3em] uppercase mb-4">What I Build</p>
           <h2 className="font-serif text-[clamp(2.5rem,5vw,5rem)] text-cream mb-20 leading-tight max-w-lg">
-            Three Domains.<br />One Operating System.
+            Built for Founders.<br />Structured for Operators.
           </h2>
         </FadeIn>
 

@@ -1,4 +1,5 @@
 import FadeIn from '@/components/ui/FadeIn'
+import PortraitFrame from '@/components/ui/PortraitFrame'
 
 export default function Story() {
   return (
@@ -11,6 +12,7 @@ export default function Story() {
               <h2 className="font-serif text-[clamp(2.5rem,4vw,4.5rem)] text-cream leading-tight">
                 How I Got Here
               </h2>
+              <PortraitFrame className="mt-12 max-w-[18rem]" />
             </div>
           </FadeIn>
 

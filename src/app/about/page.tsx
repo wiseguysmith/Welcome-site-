@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import FadeIn from '@/components/ui/FadeIn'
 import Button from '@/components/ui/Button'
+import PortraitFrame from '@/components/ui/PortraitFrame'
 
 export const metadata: Metadata = {
   title: 'About | WISE',
@@ -22,9 +23,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-[1fr,1.8fr] gap-16 md:gap-24 mb-32">
           <FadeIn>
             <div className="md:sticky md:top-32">
-              <div className="aspect-[3/4] bg-charcoal/30 border border-cream/10 flex items-end p-6">
-                <p className="font-mono text-xs text-cream/15 tracking-widest">Photo coming</p>
-              </div>
+              <PortraitFrame priority />
             </div>
           </FadeIn>
 

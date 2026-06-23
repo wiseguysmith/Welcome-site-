@@ -16,6 +16,10 @@ export default function EcosystemDashboard() {
               <h2 className="font-serif text-[clamp(2.5rem,5vw,5rem)] text-cream leading-tight">
                 The WISE<br />Ecosystem
               </h2>
+              <p className="text-cream/35 text-sm mt-5 max-w-md leading-relaxed">
+                A connected body of work across AI systems, real-world assets,
+                community infrastructure, and operator-led ventures.
+              </p>
             </div>
             <Link
               href="/work"
