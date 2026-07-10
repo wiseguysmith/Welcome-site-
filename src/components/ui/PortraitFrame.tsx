@@ -14,7 +14,7 @@ export default function PortraitFrame({ className = '', priority = false }: Port
       <div className="relative aspect-[3/4] overflow-hidden border border-cream/10 bg-charcoal/30">
         <Image
           src={portraitSrc}
-          alt="Temporary editorial portrait placeholder"
+          alt="Elijah Smith speaking at a podium"
           fill
           priority={priority}
           sizes="(min-width: 1024px) 360px, (min-width: 768px) 40vw, 100vw"

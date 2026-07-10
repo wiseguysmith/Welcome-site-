@@ -12,6 +12,8 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
   background-color: #0A0A08;
   color: #F2EDE4;
+  min-height: 100vh;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,4 +76,51 @@ body {
 select option {
   background-color: #1A1A16;
   color: #F2EDE4;
+}
+
+@keyframes doorwaySettle {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOnly {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.doorway-question,
+.doorway-note,
+.doorway-scroll,
+.mirror-line {
+  opacity: 0;
+  animation: doorwaySettle 900ms cubic-bezier(0.21, 0.47, 0.32, 0.98) forwards;
+}
+
+.doorway-note { animation-delay: 1.2s; }
+.doorway-scroll { animation: fadeInOnly 900ms ease forwards; animation-delay: 1.45s; }
+.mirror-delay-1 { animation-delay: 120ms; }
+.mirror-delay-2 { animation-delay: 420ms; }
+.mirror-delay-3 { animation-delay: 720ms; }
+.mirror-delay-4 { animation-delay: 1080ms; }
+.mirror-delay-5 { animation-delay: 1320ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .doorway-question,
+  .doorway-note,
+  .doorway-scroll,
+  .mirror-line {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }

@@ -4,8 +4,8 @@ import EssayCard from '@/components/ui/EssayCard'
 import { essays } from '@/data/essays'
 
 export const metadata: Metadata = {
-  title: 'Essays | WISE',
-  description: 'Thoughts on technology, capital, systems, and the future of access.',
+  title: 'Essays | Elijah Smith',
+  description: 'Notes on technology, capital, and access.',
 }
 
 export default function EssaysPage() {
@@ -18,11 +18,10 @@ export default function EssaysPage() {
             Essays
           </h1>
           <p className="text-cream/35 text-lg max-w-xl mb-16">
-            Thoughts on technology, capital, systems, and the future of access.
+            Notes on technology, capital, and access.
           </p>
         </FadeIn>
 
-        {/* Category labels (filter to be wired up) */}
         <FadeIn delay={0.1}>
           <div className="flex flex-wrap gap-3 mb-16">
             {['All', 'Systems', 'Capital', 'Ecosystems', 'Philosophy', 'Field Notes'].map((cat) => (
@@ -59,3 +58,4 @@ export default function EssaysPage() {
     </div>
   )
 }
+

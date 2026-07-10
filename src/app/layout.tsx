@@ -27,13 +27,13 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'WISE | Systems. Capital. Transformation.',
-  description: 'Building systems at the intersection of capital, technology, and human transformation.',
+  title: 'Elijah Smith',
+  description: 'I build doors where people keep finding walls.',
   openGraph: {
-    title: 'WISE',
-    description: 'Building systems at the intersection of capital, technology, and human transformation.',
+    title: 'Elijah Smith',
+    description: 'I build doors where people keep finding walls.',
     url: 'https://elijah.mindfultech.services',
-    siteName: 'WISE',
+    siteName: 'Elijah Smith',
     locale: 'en_US',
     type: 'website',
   },
@@ -53,3 +53,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+

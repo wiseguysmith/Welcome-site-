@@ -14,9 +14,9 @@ interface FormData {
 }
 
 const areas = [
-  'AI systems & automation',
+  'AI systems and automation',
   'Tokenization / RWA',
-  'Founder ecosystem',
+  'Founder room',
   'Strategic partnership',
   'Speaking / press',
   'Other',
@@ -35,8 +35,8 @@ export default function ConsultationForm() {
 
   const onSubmit = async (data: FormData) => {
     // TODO: connect to email service (Resend, SendGrid, Formspree, etc.)
-    console.log('Consultation form — pending backend integration:', data)
-    await new Promise((r) => setTimeout(r, 600))
+    console.log('Consultation form - pending backend integration:', data)
+    await new Promise((resolve) => setTimeout(resolve, 600))
     setSubmitted(true)
   }
 
@@ -46,7 +46,7 @@ export default function ConsultationForm() {
         <p className="font-mono text-xs text-gold/50 tracking-[0.3em] uppercase mb-4">Received</p>
         <p className="font-serif text-3xl text-cream mb-4">Thank you.</p>
         <p className="text-cream/35 text-sm">
-          I’ll review your message and be in touch within 48 hours.
+          I will review your message and be in touch within 48 hours.
         </p>
       </div>
     )
@@ -56,7 +56,7 @@ export default function ConsultationForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="border border-gold/10 p-3 mb-2">
         <p className="font-mono text-xs text-gold/30 tracking-[0.15em] text-center">
-          Form ready · Backend integration pending
+          Form ready / backend pending
         </p>
       </div>
 
@@ -98,7 +98,7 @@ export default function ConsultationForm() {
       <div>
         <label className="font-mono text-xs text-cream/35 tracking-[0.2em] uppercase block mb-2">What are you building? *</label>
         <textarea
-          {...register('building', { required: 'Please describe what you\'re building' })}
+          {...register('building', { required: 'Please describe what you are building' })}
           rows={3}
           className={`${inputCls} resize-none`}
           placeholder="Describe your project or work"
@@ -112,20 +112,20 @@ export default function ConsultationForm() {
           {...register('needHelp', { required: 'Please describe what you need' })}
           rows={3}
           className={`${inputCls} resize-none`}
-          placeholder="What’s the specific challenge or opportunity?"
+          placeholder="What is the specific challenge or opportunity?"
         />
         {errors.needHelp && <p className="text-gold/60 text-xs mt-1">{errors.needHelp.message}</p>}
       </div>
 
       <div>
-        <label className="font-mono text-xs text-cream/35 tracking-[0.2em] uppercase block mb-2">Area of Interest *</label>
+        <label className="font-mono text-xs text-cream/35 tracking-[0.2em] uppercase block mb-2">Area of interest *</label>
         <select
           {...register('area', { required: 'Please select an area' })}
           className={inputCls}
         >
           <option value="">Select one</option>
-          {areas.map((a) => (
-            <option key={a} value={a}>{a}</option>
+          {areas.map((area) => (
+            <option key={area} value={area}>{area}</option>
           ))}
         </select>
         {errors.area && <p className="text-gold/60 text-xs mt-1">{errors.area.message}</p>}
@@ -133,12 +133,12 @@ export default function ConsultationForm() {
 
       <div>
         <label className="font-mono text-xs text-cream/35 tracking-[0.2em] uppercase block mb-2">
-          Budget / Timeline <span className="text-cream/20">(optional)</span>
+          Budget / timeline <span className="text-cream/20">(optional)</span>
         </label>
         <input
           {...register('budget')}
           className={inputCls}
-          placeholder="e.g. Q3 2026, $10k–$50k, flexible"
+          placeholder="e.g. Q3 2026, $10k-$50k, flexible"
         />
       </div>
 
@@ -147,8 +147,9 @@ export default function ConsultationForm() {
         disabled={isSubmitting}
         className="w-full bg-gold text-black py-4 text-xs tracking-[0.2em] uppercase hover:bg-gold/80 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-2"
       >
-        {isSubmitting ? 'Sending…' : 'Submit'}
+        {isSubmitting ? 'Sending...' : 'Submit'}
       </button>
     </form>
   )
 }
+
