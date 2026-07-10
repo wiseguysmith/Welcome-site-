@@ -17,14 +17,14 @@ export default function EssaysPreview() {
                 Systems Notes
               </h2>
               <p className="text-cream/35 text-sm mt-3 max-w-sm">
-                Thoughts on technology, capital, systems, and the future of access.
+                Notes on technology, capital, and access.
               </p>
             </div>
             <Link
               href="/essays"
               className="font-mono text-xs text-gold/50 tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300 whitespace-nowrap"
             >
-              All Essays →
+              All Essays -&gt;
             </Link>
           </div>
         </FadeIn>
@@ -40,3 +40,4 @@ export default function EssaysPreview() {
     </section>
   )
 }
+

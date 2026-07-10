@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const essay = getEssayBySlug(params.slug)
   if (!essay) return {}
   return {
-    title: `${essay.frontmatter.title} | WISE`,
+    title: `${essay.frontmatter.title} | Elijah Smith`,
     description: essay.frontmatter.description,
   }
 }
@@ -29,16 +29,16 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
             href="/essays"
             className="font-mono text-xs text-cream/25 tracking-[0.2em] uppercase hover:text-gold transition-colors duration-300 mb-14 block"
           >
-            &larr; Essays
+            &lt;- Essays
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="font-mono text-xs text-gold/50 tracking-[0.2em] uppercase">
               {essay.frontmatter.category}
             </span>
-            <span className="text-cream/20">&middot;</span>
+            <span className="text-cream/20">/</span>
             <span className="text-cream/30 text-xs">{essay.frontmatter.readTime}</span>
-            <span className="text-cream/20">&middot;</span>
+            <span className="text-cream/20">/</span>
             <span className="text-cream/30 text-xs">{essay.frontmatter.date}</span>
           </div>
 
@@ -60,3 +60,4 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     </div>
   )
 }
+

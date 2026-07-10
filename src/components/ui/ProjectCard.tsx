@@ -2,8 +2,11 @@ import { Project } from '@/data/projects'
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group border border-cream/10 p-8 hover:border-gold/30 transition-all duration-500 bg-charcoal/20 hover:bg-charcoal/50 h-full">
-      <div className="flex items-start justify-between mb-6 gap-4">
+    <article
+      id={project.id}
+      className="group scroll-mt-32 border border-cream/10 p-8 hover:border-gold/30 transition-all duration-500 bg-black hover:bg-charcoal/35 h-full"
+    >
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-4">
         <div>
           <p className="font-mono text-xs text-gold/50 tracking-[0.2em] uppercase mb-2">
             {project.category}
@@ -13,7 +16,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           </h3>
         </div>
         <span
-          className={`font-mono text-xs px-3 py-1 border tracking-[0.15em] uppercase shrink-0 ${
+          className={`font-mono text-xs px-3 py-1 border tracking-[0.15em] uppercase shrink-0 self-start max-w-full leading-relaxed ${
             project.status === 'Active'
               ? 'border-gold/30 text-gold/60'
               : project.status === 'Active Development'
@@ -25,7 +28,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         </span>
       </div>
 
-      <p className="text-cream/50 text-sm leading-relaxed mb-6">
+      <p className="font-serif text-xl text-cream/75 leading-snug mb-5">
+        {project.wall}
+      </p>
+
+      <p className="text-cream/45 text-sm leading-relaxed mb-6">
         {project.description}
       </p>
 
@@ -42,6 +49,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       )}
-    </div>
+    </article>
   )
 }

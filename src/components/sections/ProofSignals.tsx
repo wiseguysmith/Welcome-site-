@@ -6,9 +6,9 @@ export default function ProofSignals() {
     <section className="py-32 border-t border-cream/10">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         <FadeIn>
-          <p className="font-mono text-xs text-gold/50 tracking-[0.3em] uppercase mb-4">Proof</p>
+          <p className="font-mono text-xs text-gold/50 tracking-[0.3em] uppercase mb-4">Receipts</p>
           <h2 className="font-serif text-[clamp(2.5rem,5vw,5rem)] text-cream mb-20 leading-tight">
-            Selected Signals
+            A few things with numbers on them.
           </h2>
         </FadeIn>
 
@@ -35,3 +35,4 @@ export default function ProofSignals() {
     </section>
   )
 }
+

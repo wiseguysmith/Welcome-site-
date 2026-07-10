@@ -3,16 +3,16 @@ import FadeIn from '@/components/ui/FadeIn'
 import ConsultationForm from '@/components/forms/ConsultationForm'
 
 export const metadata: Metadata = {
-  title: 'Consultation | WISE',
-  description: "Schedule a consultation with WISE. Let's talk about your work.",
+  title: 'Consultation | Elijah Smith',
+  description: "Start a conversation with Elijah Smith about what you are building.",
 }
 
 const areas = [
-  'AI systems & automation',
+  'AI systems and automation',
   'Real-world asset tokenization',
-  'Founder ecosystem design',
+  'Founder room design',
   'Strategic partnership',
-  'Speaking & press',
+  'Speaking and press',
 ]
 
 export default function ConsultationPage() {
@@ -22,14 +22,13 @@ export default function ConsultationPage() {
         <div className="grid md:grid-cols-[1fr,1.5fr] gap-16 md:gap-24 items-start">
           <FadeIn>
             <div className="md:sticky md:top-32">
-              <p className="font-mono text-xs text-gold/50 tracking-[0.3em] uppercase mb-4">Work Together</p>
+              <p className="font-mono text-xs text-gold/50 tracking-[0.3em] uppercase mb-4">Start Here</p>
               <h1 className="font-serif text-[clamp(2.5rem,5vw,5rem)] text-cream leading-tight mb-6">
-                Schedule a<br />Consultation
+                Tell me what you are building.
               </h1>
               <p className="text-cream/40 leading-relaxed mb-8 text-sm">
-                Whether you’re building an AI system, exploring tokenization, designing
-                a founder ecosystem, or need a strategic partner — let’s talk about
-                what you’re working on.
+                If the work touches AI systems, tokenized real assets, founder rooms,
+                or access to capital, this is a good place to start.
               </p>
 
               <div className="space-y-3 mb-10">
@@ -47,7 +46,7 @@ export default function ConsultationPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-xs tracking-[0.2em] uppercase bg-gold text-black px-8 py-4 hover:bg-gold/80 transition-all duration-300"
               >
-                Book Directly on Calendly
+                Book directly on Calendly
               </a>
               <p className="text-cream/20 text-xs mt-4">Or fill out the form below.</p>
             </div>
@@ -61,3 +60,4 @@ export default function ConsultationPage() {
     </div>
   )
 }
+
